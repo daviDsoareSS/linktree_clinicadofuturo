@@ -3,79 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Links • Clínica do Futuro</title>
+    <link rel="shortcut icon" href="img/logo_clinicadofuturo.webp" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <div class="content">
-            <div class="wrapper">
-                <a href="" class="logo">
-                    <img src="img/logo_clinicadofuturo.webp" alt="">
-                </a>
-                <div class="faixa">
-                    <img src="img/arco.webp" alt="">
-                    <h3>
-                        Fazendo mais pelo 
-                        <br>
-                        <strong>futuro do seu sorriso</strong>
-                    </h3>
+        <div class="wrapper">
+            <a href="https://www.clinicadofuturo.com.br/" class="logo animate" data-animate="top">
+                <img src="img/logo_clinicadofuturo.webp" alt="Logo Clínica do Futuro">
+            </a>
+
+            <div class="faixa">
+                <img src="img/arco.webp" alt="Imagem Cliníca do Futuro" class="animate" data-animate="left">
+                
+                <h3 class="animate" data-animate="left">
+                    Fazendo mais pelo
+                    <br>
+                    <span>futuro do seu sorriso</span>
+                </h3>
+            </div>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://www.clinicadofuturo.com.br/" target="_blank" class="animate site" data-animate="top">
+                            <img src="img/web.webp" alt="Acessar noso site">
+                            <span>
+                                ACESSE NOSSO SITE
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.clinicadofuturo.com.br/contato" target="_blank" class="animate" data-animate="top">
+                            <img src="img/duvidas.webp" alt="Dúvidas gerais">
+                            <span>
+                                DÚVIDAS GERAIS
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/dofuturoclinica/" target="_blank" class="animate" data-animate="top">
+                            <img src="img/video.webp" alt="Nossos vídeos">
+                            <span>
+                                NOSSOS VÍDEOS
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.clinicadofuturo.com.br/especialidades" target="_blank" class="animate" data-animate="top">
+                            <img src="img/dente.webp" alt="Podemos cuidar da sua família">
+                            <span>
+                                Podemos cuidar da sua família
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send/?phone=5511954055029&text=Ol%C3%A1%2C+tudo+bem%3F&type=phone_number&app_absent=0" target="_blank" class="animate" data-animate="top">
+                            <img src="img/whatsapp.webp" alt="Agendar pelo Whatsapp">
+                            <span>
+                                AGENDE PELO WHATSAPP
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="footer">
+                <div class="content">
+                    <p>
+                        <span>
+                            Unid. Cajamar - Av. Tenente Marques, 3385, Portal do Ipês - (11) 95405-5029
+                        </span>
+                        
+                        <span>
+                            Unid. Stna. de Parnaíba - Estr. Tenente Marques, 6203, Fazendinha - (11) 94682-7073
+                        </span>
+
+                        <span>
+                            Unid. Sumaré - Av. Emílio Bosco, 850, Matão - (11) 94682-7073
+                        </span>
+                    </p>
                 </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="">
-                                <img src="img/web.svg" alt="">
-                                <span>
-                                    ACESSE NOSSO SITE
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="img/duvidas.webp" alt="">
-                                <span>
-                                    DÚVIDAS GERAIS
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="img/video.webp" alt="">
-                                <span>
-                                    NOSSOS VÍDEOS
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="img/dente.webp" alt="">
-                                <span>
-                                    podemos cuidar da sua família
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="img/whatsapp.webp" alt="">
-                                <span>
-                                    AGENDE PELO WHATSAPP
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </div>
-        <footer>
-            <div class="content">
-                <p>
-                    Unid. Cajamar - Av. Tenente Marques, 3385, Portal do Ipês - (11) 95405-5029 <br>
-                    Unid. Stna. de Parnaíba - Estr. Tenente Marques, 6203, Fazendinha - (11) 94682-7073 <br>
-                    Unid. Sumaré -  Av. Emílio Bosco, 850, Matão - (11) 94682-7073
-                </p>
-            </div>
-        </footer>
     </main>
+    
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const targets = document.querySelectorAll('.animate');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            targets.forEach(target => observer.observe(target));
+        });
+    </script>
 </body>
 </html>
