@@ -219,6 +219,20 @@ nav ul li a span {
     opacity: 1;
     transform: none;
 }
+.by-engenho {
+    background-color: #202020;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 1rem;
+}
+.by-engenho a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @media (min-width: 1080px) {
     main .wrapper {
         min-height: 100dvh;
@@ -233,5 +247,10 @@ nav ul li a span {
     }
     .footer {
         font-size: 14px;
+    }
+}
+@media (max-width: 400px) {
+    .by-engenho img {
+        width: 220px;
     }
 }
